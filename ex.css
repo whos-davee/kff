@@ -1,24 +1,128 @@
 *{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Poppins' , sans-serif; 
 }
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+li, a, button{
+   font-family: 'Poppins' , sans-serif;
+   font-weight: 500;
+   font-size: 14px;
+   color: #edf0f1;
+   text-decoration: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(2, 38, 53, 0.7);
+    z-index: 1000;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+    width: 50px;    
+    cursor: pointer;
+    margin-right: 12px;
+}
+.logo-text{
+    color: #4BB4DE;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.nav-links{ 
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    gap: 20px;
+}
+nav{
+    margin-left: auto;
+}
+.cta{
+    margin-left: 30px;
+}
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover{
+    color: #4BB4DE;
+}
+button{
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: #4BB4DE;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: #007ACC;
+}
+
+@media screen and (max-width: 770px) {
+    .banner-text h1{
+        font-size: 44px; 
+    }
+    .banner-btn a{
+        display: block;
+        margin: 20px auto;
+    }
+}
+#banner,
+#features,
+#benefits,
+#testimonials,
+#footer {
+    scroll-margin-top: 70px;
+    min-height: calc(50vh - 70px);
+    padding-top: 30px;
+    scroll-snap-align: start;
+}
+
+/*--BANNER--*/
 #banner{
     background: linear-gradient(rgba(0,0,0,0.5), #4BB4DE), url(images/20162471-6.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
-}
-.logo{
-    width: 100px;
-    position: absolute;
-    top: 4%;
-    left: 3%;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 100px;
 }
 .banner-text{
     text-align: center;
     color: #fff;
-    padding-top: 180px;
 }
 .banner-text h1{
     font-size: 130px; 
@@ -55,74 +159,22 @@
 }
 .banner-btn a:hover span{
     width: 100%;
-}
+}   
 .banner-btn a:hover{
     color: #000;
 }
 
-#sideNav{
-    width: 150px;
-    height: 100vh;
-    position: fixed;
-    right: -150px;
-    top: 0;
-    background: #4BB4DE;
-    z-index: 2;
-    transition: 0.5s;
-}
-nav ul li {
-    list-style: none;
-    margin: 50px 20px;
-}
-nav ul li a{
- text-decoration: none;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-nav ul li a:hover {
-    background-color: #007ACC; 
-    border-radius: 10px;
-    color: #fff; 
-}
-#menubtn{
-    width: 50px;
-    height: 40px;
-    background: #4BB4DE;
-    text-align: center;
-    position: fixed;
-    right: 10px;
-    top: 5px;
-    border-radius: 3px;
-    z-index: 3;
-    cursor: pointer;
-}
-#menubtn img{
-    width: 20px;
-    margin-top: 10px;
-}
-@media screen and (max-width: 770px) {
-    .banner-text h1{
-        font-size: 44px; 
-    }
-    .banner-btn a{
-        display: block;
-        margin: 20px auto;
-    }
-}
 
 /*--FEATURES--*/
 
 #features{
     width: 100%;
-    padding: 50px 0;
+    padding: 60px 0;
 }
 .title-text{
     text-align: center;
     padding-bottom: 30px;
+    padding-top: 20px;
 }
 .title-text p {
     margin: auto;
@@ -160,9 +212,7 @@ nav ul li a:hover {
 .features{
     flex-basis: 50%;
 }
-html {
-    scroll-behavior: smooth;
-}
+
 .slider-frame {
     overflow: hidden;
     height: 500px; 

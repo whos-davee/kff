@@ -4,7 +4,7 @@ body {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background: linear-gradient(30deg, rgb(100, 241, 84), rgb(92, 92, 229), rgb(111, 30, 30));
+    background: linear-gradient(30deg, rgb(3, 193, 240), rgb(5, 65, 230), rgb(3, 193, 240));
 }
 .logo{
     position: absolute;
@@ -15,8 +15,8 @@ body {
     z-index: 1000;
     padding: 10px;
     border-radius: 10px;
-    background: linear-gradient(45deg, #FFD700, #FF4500); /* Vibrant gradient */
-    filter: drop-shadow(0px 0px 10px rgba(255, 165, 0, 0.8)); /* Glow effect */
+    background: linear-gradient(45deg, #ffffff, #2600ff); /* Vibrant gradient */
+    filter: drop-shadow(0px 0px 10px rgba(0, 195, 255, 0.8)); /* Glow effect */
 }
 
 .container {
